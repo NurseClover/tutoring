@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>공지사항</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0044cc;
+      font-weight: bold;
+    }
+    .notice-item {
+      margin: 15px auto;
+      width: 80%;
+      text-align: left;
+    }
+    .notice-item button {
+      width: 100%;
+      background: #f0f0f0;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .notice-item button:hover {
+      background: #e0e0e0;
+    }
+    .detail {
+      padding: 10px;
+      background: #e9f7ff;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="game.html">🎮 게임</a>
+    <a href="study.html">📖 학습자료</a>
+    <a href="notice.html">📢 공지</a>
+  </nav>
+
+  <h1>📢 공지사항</h1>
+
+  <div class="notice-item">
+    <button onclick="toggleDetail(this)">✔ 3월 26일 – 게임 업데이트 완료</button>
+    <div class="detail">챕터 선택 기능 추가, 점수 시스템 개선</div>
+  </div>
+
+  <div class="notice-item">
+    <button onclick="toggleDetail(this)">✔ 3월 25일 – 웹사이트 오픈</button>
+    <div class="detail">경북전문대학교 25학년도 학습 시작!</div>
+  </div>
+
+  <script>
+    function toggleDetail(btn) {
+      const detail = btn.nextElementSibling;
+      detail.style.display = (detail.style.display === "none" || detail.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
